@@ -1,3 +1,4 @@
+from http import server
 import streamlit as st
 import boto3
 from botocore.exceptions import NoCredentialsError, ClientError
@@ -11,7 +12,6 @@ AWS_SECRET_KEY = st.secrets["AWS_SECRET_ACCESS_KEY_ID"]
 AWS_REGION = "us-east-2"  # Replace with your desired region
 S3_BUCKET = "efficient-content"  # Replace with your bucket name
 CHUNK_SIZE = 5 * 1024 * 1024  # 5 MB
-
 # Initialize S3 client
 
 
